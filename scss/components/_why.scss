@@ -1,0 +1,19 @@
+@use "./vars" as *;
+
+.why{
+    @include headTitleStyle;
+    background-color: #f0f5f4;
+    .head{
+        margin-inline:0 !important;
+    }
+    .why-features{
+       .feature{
+        margin-top: 25px;
+        h3{
+            font-size: 20px;
+            font-weight: 600;
+            color: $second_color;
+        }
+       }
+    }
+}

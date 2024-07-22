@@ -1,0 +1,13 @@
+@use "./vars" as *;
+
+.results{
+    @include headTitleStyle;
+    dt{
+        color: #093a4a;
+        font-weight: 600;
+        font-size: 20px;
+    }
+    dd{
+        color: $second_color;
+    }
+}

@@ -1,0 +1,24 @@
+@use "./vars" as *;
+
+.security{
+    @include headTitleStyle;
+    .head{
+        margin-inline: 0;
+    }
+    .description{
+        p{
+            font-size: 17px;
+        }
+        a{
+           @include buttonStyle;
+        }
+        .imgs{
+            margin-top: 50px;
+            display: flex;
+            img{
+                width: 30%;
+                margin-right: 20px;
+            }
+        }
+    }
+}

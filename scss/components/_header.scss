@@ -1,0 +1,16 @@
+@use "./vars" as *;
+.header{
+    background-image: linear-gradient($main_color,$second_color);
+    background-color: $main_color;
+    .logo-mobile-bg{
+        background-image: linear-gradient($main_color,$second_color);
+    }
+    .shape{
+        width: 100%;
+        bottom: -180px;
+        img{
+            width: 100%;
+            height: 200px !important;
+        }
+    }
+}

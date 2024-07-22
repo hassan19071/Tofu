@@ -1,0 +1,38 @@
+$main_color:#1fcfcf;
+$second_color:#2491af;
+
+
+@mixin headTitleStyle{
+    .head{
+        margin-inline: auto;
+        width: 70%;
+        @media (max-width:991px) {
+            width: 100%;
+        }
+        h1{
+            color: #093a4a;
+            background-image: linear-gradient(#000, rgba(8, 58, 74, .59));
+            background-clip: text;
+            font-size: calc(1rem + 2vw);
+            font-weight: 600;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 50px;
+            @media (max-width:991px) {
+                line-height: 30px;
+            }    
+        }
+        p{
+            text-transform: uppercase;
+            color: #093a4a;
+            font-weight: 600;
+        }
+    }
+}
+
+@mixin buttonStyle{
+    background-image: linear-gradient(to right,$second_color,$main_color);
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 8px;
+}

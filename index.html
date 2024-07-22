@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tofu | Payroll Platform for Payroll Processors</title>
+    <meta
+      content="Tofu is an innovative AI payroll software that is specifically designed to simplify the complexities associated with global employment and payroll management. With Tofu you can efficiently onboard and manage workers."
+      name="description"
+    />
+    <link
+      href="https://cdn.prod.website-files.com/641be0e06de2d6dd362c7ba2/662590b75686dcb2c927b921_download-compresskaru.com.png"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.prod.website-files.com/641be0e06de2d6dd362c7ba2/666ad2397951e730b528b50c_download-compresskaru.com%20(1).png"
+      rel="apple-touch-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+    <link rel="stylesheet" href="scss/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="bg-light header relative">
+      <header class="absolute inset-x-0 top-0 z-50">
+        <nav
+          class="flex items-center justify-between p-6 lg:px-8"
+          aria-label="Global"
+        >
+          <div class="flex lg:flex-1">
+            <a href="#" class="-m-1.5 p-1.5">
+              <img class="h-8 w-auto" src="/imgs/logo.png" alt="logo" />
+            </a>
+          </div>
+          <div class="flex lg:hidden">
+            <button
+              type="button"
+              id="open-btn"
+              class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
+            >
+              <svg
+                class="h-10 w-10"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="hidden lg:flex lg:gap-x-12">
+            <a href="#" class="text-md font-semibold leading-6 text-gray-100"
+              >Home</a
+            >
+            <a href="#" class="text-md font-semibold leading-6 text-gray-100"
+              >AI Features</a
+            >
+            <a href="#" class="text-md font-semibold leading-6 text-gray-100"
+              >Security</a
+            >
+            <a href="#" class="text-md font-semibold leading-6 text-gray-100"
+              >Our Story</a
+            >
+          </div>
+          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a
+              href="#"
+              class="text-md font-semibold leading-6 text-gray-100 hover:tracking-wider transition-all duration-100"
+              >Contact Us <span aria-hidden="true">&rarr;</span></a
+            >
+          </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div
+          class="hidden"
+          role="dialog"
+          aria-modal="true"
+          id="mobile-links-container"
+        >
+          <!-- Background backdrop, show/hide based on slide-over state. -->
+          <div class="fixed inset-0 z-50"></div>
+          <div
+            class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+          >
+            <div class="flex items-center justify-between logo-mobile-bg p-4">
+              <a href="#" class="-m-1.5 p-1.5">
+                <img class="h-8 w-auto" src="/imgs/logo.png" alt="Logo" />
+              </a>
+              <button
+                type="button"
+                id="x-btn"
+                class="-m-2.5 rounded-md p-2.5 text-gray-200"
+              >
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.8"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="space-y-2 py-6">
+                  <a
+                    href="#"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >Home</a
+                  >
+                  <a
+                    href="#"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >AI Features</a
+                  >
+                  <a
+                    href="#"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >Security</a
+                  >
+                  <a
+                    href="#"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >Our Story</a
+                  >
+                </div>
+                <div class="py-6">
+                  <a
+                    href="#"
+                    class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="relative isolate px-6 pt-14 lg:px-8">
+        <div class="mx-auto max-w-5xl pt-32 pb-16">
+          <div class="text-center">
+            <h1
+              class="text-4xl font-bold tracking-tight text-gray-100 sm:text-6xl"
+            >
+              The First Global Payroll Platform, Built for the Payroll Processor
+            </h1>
+            <p class="mt-6 text-lg leading-8 text-gray-200">
+              Save Time, Attract More Clients, Boost Security with Our AI
+              Solution.
+            </p>
+            <div class="mt-10 flex items-center justify-center gap-x-6">
+              <a
+                href="#"
+                class="font-semibold leading-6 text-gray-200 text-md uppercase hover:tracking-widest transition-all duration-100"
+                >Join Waitlist <span aria-hidden="true">→</span></a
+              >
+            </div>
+          </div>
+          <div class="text-center py-16">
+            <img src="imgs/hero.png" alt="Hero img" width="100%" />
+          </div>
+        </div>
+      </div>
+      <div class="shape absolute left-0">
+        <img src="imgs/hero-shape.png" alt="shape" />
+      </div>
+    </div>
+
+    <!-- results -->
+    <div class="bg-white pt-40 pb-32 sm:py-40 results">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="head text-center pb-12">
+          <h1>Our results in numbers:</h1>
+        </div>
+        <dl
+          class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-2"
+        >
+          <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+            <dt class="text-base leading-7 text-gray-600">Managing over</dt>
+            <dd
+              class="text-3xl counter font-semibold tracking-tight text-gray-900 sm:text-5xl"
+            >
+              2,000+
+            </dd>
+            <dt class="text-base leading-7 text-gray-600">
+              workers across the globe.
+            </dt>
+          </div>
+          <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+            <dt class="text-base leading-7 text-gray-600">Live in</dt>
+            <dd
+              class="text-3xl font-semibold tracking-tight counter text-gray-900 sm:text-5xl"
+            >
+              60
+            </dd>
+            <dt class="text-base leading-7 text-gray-600">Countries</dt>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <!-- solution -->
+    <div class="py-24 sm:py-32 solution">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="head text-center pb-12">
+          <p>DEMONSTRATION VIDEO</p>
+          <h1>Discover our solution</h1>
+        </div>
+        <div class="video">
+          <div class="video-cover relative" id="videoCover">
+            <img
+              src="https://cdn.prod.website-files.com/641be0e06de2d6dd362c7ba2/66574c81573d5707cba71df4_Screenshot%202024-05-29%20at%2017.40.38-p-1080.png"
+              alt="Video Cover"
+            />
+            <div class="play-icon" id="playIcon">▶</div>
+            <div
+              class="video-inside-overlay absolute top-0 bottom-0 left-0 right-0"
+            ></div>
+          </div>
+
+          <div class="video-overlay" id="videoOverlay">
+            <div class="video-container">
+              <div class="loading" id="loading">Loading...</div>
+              <iframe
+                id="videoFrame"
+                width="560"
+                height="315"
+                src=""
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="solution-features mt-12">
+          <div class="flex sm:flex-row flex-col items-center">
+            <div class="sm:basis-1/3">
+              <div class="head leading-7 sm:leading-10" style="width: 100%">
+                <h1>Perfect solution for all your concerns</h1>
+              </div>
+            </div>
+            <div class="sm:basis-2/3 sm:ps-32 text-gray-600 sm:mt-0 mt-3">
+              Are you looking for a way to overcome the common obstacles in the
+              payroll industry? Tofu is designed to streamline your workflows
+              and optimize your resources. It is a perfect solution if you have
+              these issues:
+            </div>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-12">
+            <div class="bg-white p-12 rounded-xl">
+              <img src="imgs/fe1.png" alt="icon 01" width="30px" />
+              <h3 class="my-4 text-xl font-bold">
+                Navigate Subcontractor Struggles with Ease
+              </h3>
+              <p class="text-gray-500 text-sm">
+                Dealing with challenges of being a subcontractor- unable to
+                speak to clients, pressured on pricing, tight deadlines, sudden
+                changes, convoluted data sets?
+              </p>
+            </div>
+            <div class="bg-white p-12 rounded-xl">
+              <img src="imgs/fe2.png" alt="icon 02" width="30px" />
+              <h3 class="my-4 text-xl font-bold">
+                Designed Specifically for Payroll Processors
+              </h3>
+              <p class="text-gray-500 text-sm">
+                Frustrated with existing software not being designed for payroll
+                processors and lacking features? And that everything seems to be
+                designed for payroll clients?
+              </p>
+            </div>
+            <div class="bg-white p-12 rounded-xl">
+              <img src="imgs/fe3.png" alt="icon 03" width="30px" />
+              <h3 class="my-4 text-xl font-bold">
+                Adapt No More – Systems that Work for You
+              </h3>
+              <p class="text-gray-500 text-sm">
+                Feel like you're constantly adjusting to the systems and
+                workflows of payroll clients and aggregators?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- features -->
+    <div class="py-24 sm:py-32 features">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="head text-center pb-12">
+          <p>Features</p>
+          <h1>
+            Efficiently manage your global workforce. Explore Tofu's powerful
+            capabilities
+          </h1>
+        </div>
+        <div
+          class="splide sm:px-24"
+          role="group"
+          aria-label="Splide Basic HTML Example"
+        >
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <div class="feature p-12">
+                  <div
+                    class="flex sm:flex-row flex-col justify-between items-center"
+                  >
+                    <div class="flex flex-col sm:basis-1/2 sm:pe-12">
+                      <div class="number">
+                        <h1 class="text-3xl font-bold">1</h1>
+                      </div>
+                      <div class="details">
+                        <h4
+                          class="text-2xl text-gray-900 sm:mt-12 mt-6 mb-4 font-bold"
+                        >
+                          White-labeling
+                        </h4>
+                        <p class="text-gray-600 text-lg">
+                          Maintain your brand image with our white-labelled
+                          solution. Customize the platform to match your brand
+                          color and logo in under 5 seconds.
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="sm:mt-0 mt-8 sm:basis-1/2 sm:px-12 px-12 img-container"
+                    >
+                      <div class="img">
+                        <img
+                          src="imgs/feature1.png"
+                          alt="feature img"
+                          width="100%"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="feature p-12">
+                  <div
+                    class="flex sm:flex-row flex-col justify-between items-center"
+                  >
+                    <div class="flex flex-col sm:basis-1/2 sm:pe-12">
+                      <div class="number">
+                        <h1 class="text-3xl font-bold">2</h1>
+                      </div>
+                      <div class="details">
+                        <h4
+                          class="text-2xl text-gray-900 sm:mt-12 mt-6 mb-4 font-bold"
+                        >
+                          Standardized Payroll Data
+                        </h4>
+                        <p class="text-gray-600 text-lg">
+                          Experience the new standard in payroll data
+                          management. Consistent formats across nations ensure
+                          reduced errors and a streamlined process.
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="sm:mt-0 mt-8 sm:basis-1/2 sm:px-12 px-12 img-container"
+                    >
+                      <div class="img">
+                        <img
+                          src="imgs/feature2.png"
+                          alt="feature img"
+                          width="100%"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="feature p-12">
+                  <div
+                    class="flex sm:flex-row flex-col justify-between items-center"
+                  >
+                    <div class="flex flex-col sm:basis-1/2 sm:pe-12">
+                      <div class="number">
+                        <h1 class="text-3xl font-bold">3</h1>
+                      </div>
+                      <div class="details">
+                        <h4
+                          class="text-2xl text-gray-900 sm:mt-12 mt-6 mb-4 font-bold"
+                        >
+                          Dynamic Dashboards and Analytics
+                        </h4>
+                        <p class="text-gray-600 text-lg">
+                          Unlock actionable insights with our interactive
+                          dashboards. From workforce dynamics to intricate
+                          financial analytics, make informed decisions every
+                          step of the way.
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="sm:mt-0 mt-8 sm:basis-1/2 sm:px-12 px-12 img-container"
+                    >
+                      <div class="img">
+                        <img
+                          src="imgs/feature3.png"
+                          alt="feature img"
+                          width="100%"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="feature p-12">
+                  <div
+                    class="flex sm:flex-row flex-col justify-between items-center"
+                  >
+                    <div class="flex flex-col sm:basis-1/2 sm:pe-12">
+                      <div class="number">
+                        <h1 class="text-3xl font-bold">4</h1>
+                      </div>
+                      <div class="details">
+                        <h4
+                          class="text-2xl text-gray-900 sm:mt-12 mt-6 mb-4 font-bold"
+                        >
+                          Payroll Tasks and Flows
+                        </h4>
+                        <p class="text-gray-600 text-lg">
+                          Navigate your payroll tasks effortlessly with our
+                          organized task management system. Every step, every
+                          process, optimized for efficiency.
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="sm:mt-0 mt-8 sm:basis-1/2 sm:px-12 px-12 img-container"
+                    >
+                      <div class="img">
+                        <img
+                          src="imgs/feature4.png"
+                          alt="feature img"
+                          width="100%"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="feature p-12">
+                  <div
+                    class="flex sm:flex-row flex-col justify-between items-center"
+                  >
+                    <div class="flex flex-col sm:basis-1/2 sm:pe-12">
+                      <div class="number">
+                        <h1 class="text-3xl font-bold">5</h1>
+                      </div>
+                      <div class="details">
+                        <h4
+                          class="text-2xl text-gray-900 sm:mt-12 mt-6 mb-4 font-bold"
+                        >
+                          System Integration
+                        </h4>
+                        <p class="text-gray-600 text-lg">
+                          Synchronize seamlessly. Integrate Tofu with leading
+                          HRIS systems, ensuring that your HR operations run
+                          cohesively.
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="sm:mt-0 mt-8 sm:basis-1/2 sm:px-12 px-12 img-container"
+                    >
+                      <div class="img">
+                        <img
+                          src="imgs/feature5.png"
+                          alt="feature img"
+                          width="100%"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="feature p-12">
+                  <div
+                    class="flex sm:flex-row flex-col justify-between items-center"
+                  >
+                    <div class="flex flex-col sm:basis-1/2 sm:pe-12">
+                      <div class="number">
+                        <h1 class="text-3xl font-bold">6</h1>
+                      </div>
+                      <div class="details">
+                        <h4
+                          class="text-2xl text-gray-900 sm:mt-12 mt-6 mb-4 font-bold"
+                        >
+                          Direct Communication
+                        </h4>
+                        <p class="text-gray-600 text-lg">
+                          Efficiently annotate payroll reports and collaborate
+                          seamlessly without the cumbersome exchange of multiple
+                          emails.
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="sm:mt-0 mt-8 sm:basis-1/2 sm:px-12 px-12 img-container"
+                    >
+                      <div class="img">
+                        <img
+                          src="imgs/feature6.png"
+                          alt="feature img"
+                          width="100%"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- why -->
+    <div class="py-24 sm:py-32 why">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
+          <div class="img my-6">
+            <img src="imgs/why1.png" alt="why img" width="100%" />
+          </div>
+          <div class="text">
+            <div class="head pb-12">
+              <p class="text-center">WHY TOFU STANDS OUT?</p>
+              <h1>Save up to 90% of your time with Tofu AI</h1>
+            </div>
+            <div class="why-features">
+              <div class="feature flex items-center">
+                <div class="img">
+                  <img src="imgs/shape-why.svg" alt="shape" width="50px" />
+                </div>
+                <div class="description">
+                  <h3>AI-Powered Email Generation</h3>
+                  <p class="text-gray-600">
+                    Optimize email creation and data procedures seamlessly.
+                  </p>
+                </div>
+              </div>
+              <div class="feature flex items-center">
+                <div class="img">
+                  <img src="imgs/shape-why.svg" alt="shape" width="50px" />
+                </div>
+                <div class="description">
+                  <h3>AI Insights</h3>
+                  <p class="text-gray-600">
+                    Unveil insights on your data utilizing smart prompts.
+                  </p>
+                </div>
+              </div>
+              <div class="feature flex items-center">
+                <div class="img">
+                  <img src="imgs/shape-why.svg" alt="shape" width="50px" />
+                </div>
+                <div class="description">
+                  <h3>AI-Driven Communication</h3>
+                  <p class="text-gray-600">
+                    Experience AI-assisted commentary in your communications.
+                  </p>
+                </div>
+              </div>
+              <div class="feature flex items-center">
+                <div class="img">
+                  <img src="imgs/shape-why.svg" alt="shape" width="50px" />
+                </div>
+                <div class="description">
+                  <h3>AI Mapping</h3>
+                  <p class="text-gray-600">
+                    Employ AI-powered integrations amongst various calculators.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 mt-24">
+          <div class="text">
+            <div class="head pb-12">
+              <p class="text-center">WHY TOFU STANDS OUT?</p>
+              <h1>Know exactly what's happening in your business</h1>
+            </div>
+            <div class="why-features">
+              <div class="feature flex items-center">
+                <div class="img">
+                  <img src="imgs/shape-why.svg" alt="shape" width="50px" />
+                </div>
+                <div class="description">
+                  <h3>Standardized Data</h3>
+                  <p class="text-gray-600">
+                    Simplify operations, gain insights.
+                  </p>
+                </div>
+              </div>
+              <div class="feature flex items-center">
+                <div class="img">
+                  <img src="imgs/shape-why.svg" alt="shape" width="50px" />
+                </div>
+                <div class="description">
+                  <h3>Dashboards</h3>
+                  <p class="text-gray-600">
+                    Real-time analytics for end clients and processors.
+                  </p>
+                </div>
+              </div>
+              <div class="feature flex items-center">
+                <div class="img">
+                  <img src="imgs/shape-why.svg" alt="shape" width="50px" />
+                </div>
+                <div class="description">
+                  <h3>Business Overview</h3>
+                  <p class="text-gray-600">
+                    Keep track of who's doing what, monitor client statuses,
+                    workload distribution and more.
+                  </p>
+                </div>
+              </div>
+              <div class="feature flex items-center">
+                <div class="img">
+                  <img src="imgs/shape-why.svg" alt="shape" width="50px" />
+                </div>
+                <div class="description">
+                  <h3>Audit Trail</h3>
+                  <p class="text-gray-600">
+                    Complete visibility of comments and modifications.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="img mt-6">
+            <img src="imgs/why2.png" alt="why img" width="100%" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- security -->
+    <div class="py-24 sm:py-32 security">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div class="text">
+            <div class="head">
+              <p>Security</p>
+              <h1>Your data's safety is our priority</h1>
+            </div>
+            <div class="description">
+              <p class="text-gray-600 py-8">
+                Tofu is proud to be ISO/IEC 27001 certified and attested with
+                SOC2 Type 2, demonstrating our commitment to maintaining the
+                highest standards of information security management. This
+                certification assures our customers that their data is protected
+                and secure.
+              </p>
+              <a href="#">Learn More</a>
+              <div class="imgs">
+                <img src="imgs/security2.png" alt="security" />
+                <img src="imgs/security3.png" alt="security" />
+              </div>
+            </div>
+          </div>
+          <div class="img mt-12 lg:mt-0">
+            <img src="imgs/security.svg" alt="main img" width="100%" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- contact -->
+    <div class="py-4 sm:py-4 contact">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="head">
+          <h1>Seamless Integration</h1>
+        </div>
+        <div class="text text-center">
+          <p class="text-gray-600">
+            Integrate Tofu effortlessly, compatible with local tech stacks. Get
+            started in less than 30 days, leaving competitors in the dust.
+          </p>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer py-24 sm:py-12 relative mt-24">
+      <div class="footer-shape absolute left-0">
+        <img src="imgs/footer-shape.png" alt="shape" width="100%">
+      </div>
+      <div class="max-auto max-w-7xl px-6 lg:px-8">
+        <div class="justify-around flex lg:flex-row flex-col py-12">
+          <div class="logo">
+            <img src="imgs/logo.png" alt="logo" width="150px" />
+          </div>
+          <div class="links lg:my-0 my-6">
+              <h5 class="text-xl text-gray-100">Company</h5>
+              <ul>
+                <li>
+                  <a href="#" class="text-gray-300 mt-3 block">Support</a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-300 mt-3 block">Contact Us</a>
+                </li>
+              </ul>
+          </div>
+          <div class="links">
+            <h5 class="text-xl text-gray-100">Features</h5>
+            <ul>
+              <li>
+                <a href="#" class="text-gray-300 mt-3 block">AI Features</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 mt-3 block">Security</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-row mt-12">
+          <p class="text-gray-100">&copy; 2024 Tofu. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      new Splide(".splide").mount();
+        jQuery(document).ready(function($) {
+            $('.counter').counterUp({
+                delay: 10,
+                time: 1000
+            });
+        });
+    </script>
+  </body>
+</html>
