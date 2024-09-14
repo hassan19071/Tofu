@@ -1,0 +1,18 @@
+@use "./vars" as *;
+
+.prof-email {
+  background-color: #f0f5f4;
+  @include headTitleStyle;
+  .head {
+    margin-left: 0;
+    img {
+      width: 60px;
+      margin-bottom: 20px;
+    }
+  }
+  .img {
+    img {
+      border-radius: 20px;
+    }
+  }
+}

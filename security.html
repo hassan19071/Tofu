@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tofu | Security BPO</title>
+    <meta
+      content="Tofu is an innovative AI payroll software that is specifically designed to simplify the complexities associated with global employment and payroll management. With Tofu you can efficiently onboard and manage workers."
+      name="description"
+    />
+    <link
+      href="https://cdn.prod.website-files.com/641be0e06de2d6dd362c7ba2/662590b75686dcb2c927b921_download-compresskaru.com.png"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.prod.website-files.com/641be0e06de2d6dd362c7ba2/666ad2397951e730b528b50c_download-compresskaru.com%20(1).png"
+      rel="apple-touch-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+    <link rel="stylesheet" href="scss/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="bg-light header second relative">
+      <header class="absolute inset-x-0 top-0 z-50">
+        <nav
+          class="flex items-center justify-between p-6 lg:px-8"
+          aria-label="Global"
+        >
+          <div class="flex lg:flex-1">
+            <a href="/index.html" class="-m-1.5 p-1.5">
+              <img class="h-8 w-auto" src="/imgs/blue-logo.png" alt="logo" />
+            </a>
+          </div>
+          <div class="flex lg:hidden">
+            <button
+              type="button"
+              id="open-btn"
+              class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            >
+              <svg
+                class="h-10 w-10"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="hidden lg:flex lg:gap-x-12">
+            <a
+              href="/index.html"
+              class="text-md font-semibold leading-6 text-gray-600"
+              >Home</a
+            >
+            <a
+              href="/ai-features.html"
+              class="text-md font-semibold leading-6 text-gray-600"
+              >AI Features</a
+            >
+            <a
+              href="/security.html"
+              class="text-md font-semibold leading-6 text-gray-600"
+              >Security</a
+            >
+            <a
+              href="/our-story.html"
+              class="text-md font-semibold leading-6 text-gray-600"
+              >Our Story</a
+            >
+          </div>
+          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a
+              href="/contact.html"
+              class="text-md font-semibold leading-6 text-gray-600 hover:tracking-wider transition-all duration-100"
+              >Contact Us <span aria-hidden="true">&rarr;</span></a
+            >
+          </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div
+          class="hidden"
+          role="dialog"
+          aria-modal="true"
+          id="mobile-links-container"
+        >
+          <!-- Background backdrop, show/hide based on slide-over state. -->
+          <div class="fixed inset-0 z-50"></div>
+          <div
+            class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+          >
+            <div class="flex items-center justify-between logo-mobile-bg p-4">
+              <a href="/index.html" class="-m-1.5 p-1.5">
+                <img class="h-8 w-auto" src="/imgs/logo.png" alt="Logo" />
+              </a>
+              <button
+                type="button"
+                id="x-btn"
+                class="-m-2.5 rounded-md p-2.5 text-gray-200"
+              >
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.8"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="space-y-2 py-6">
+                  <a
+                    href="/index.html"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >Home</a
+                  >
+                  <a
+                    href="/ai-features.html"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >AI Features</a
+                  >
+                  <a
+                    href="/security.html"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >Security</a
+                  >
+                  <a
+                    href="/our-story.html"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >Our Story</a
+                  >
+                </div>
+                <div class="py-6">
+                  <a
+                    href="/contact.html"
+                    class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <!-- security -->
+    <div class="py-32 sm:pt-44 sm:pb-32 data-security security">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div class="text">
+            <div class="head">
+              <p>Security</p>
+              <h1>Your Data's Sanctuary with Tofu</h1>
+            </div>
+            <div class="description">
+              <p class="text-gray-600 py-8">
+                Dedicated to ensuring unparalleled security standards in the
+                world of payroll processing.
+              </p>
+              <div class="imgs">
+                <img src="imgs/security3.png" alt="security" />
+                <img src="imgs/security2.png" alt="security" />
+              </div>
+            </div>
+          </div>
+          <div class="img mt-12 lg:mt-0">
+            <img src="imgs/data-security.png" alt="main img" width="100%" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- cerifications -->
+    <div class="py-24 sm:py-32 certificate security">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="head mb-12"><h1>Our Certifications and Compliance</h1></div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div class="certificate p-12 bg-gray-100 text-center">
+            <div class="img">
+              <img src="imgs/security2.png" alt="certificate" width="30%" style="margin: auto;">
+            </div>
+            <div class="text">
+              <h3 style="color: #093a4a;font-size: 25px;margin-top: 15px;margin-bottom: 20px;font-weight: 600;">SSAE 18 SOC 2 Type 2 Attestation</h3>
+              <p class="text-gray-700">Tofu has undergone SSAE 18 SOC 2 Type 2 attestation to validate our security, availability, and confidentiality controls. Our customers can request access to the attestation report.</p>
+            </div>
+          </div>
+          <div class="certificate p-12 bg-gray-100 text-center">
+            <div class="img">
+              <img src="imgs/security3.png" alt="certificate" width="30%" style="margin: auto;">
+            </div>
+            <div class="text">
+              <h3 style="color: #093a4a;font-size: 25px;margin-top: 15px;margin-bottom: 20px;font-weight: 600;">ISO/IEC 27001
+                Certification</h3>
+              <p class="text-gray-700">Tofu is proud to be ISO/IEC 27001 certified, demonstrating our commitment to maintaining the highest standards of information security management. This certification assures our customers that their data is protected and secure.</p>
+            </div>
+          </div>
+          <div class="certificate p-12 bg-gray-100 text-center">
+            <div class="img">
+              <img src="imgs/cer1.png" alt="certificate" width="30%" style="margin: auto;">
+            </div>
+            <div class="text">
+              <h3 style="color: #093a4a;font-size: 25px;margin-top: 15px;margin-bottom: 20px;font-weight: 600;">General Data Protection Regulation</h3>
+              <p class="text-gray-700">At Tofu, we prioritize the privacy and data rights of our users. We adhere to the principles of the General Data Protection Regulation (GDPR) to ensure that personal data is processed lawfully, fairly, and transparently. Our privacy practices are designed to give users control over their data and protect their privacy.</p>
+            </div>
+          </div>
+          <div class="certificate p-12 bg-gray-100 text-center">
+            <div class="img">
+              <img src="imgs/cer2.png" alt="certificate" width="30%" style="margin: auto;">
+            </div>
+            <div class="text">
+              <h3 style="color: #093a4a;font-size: 25px;margin-top: 15px;margin-bottom: 20px;font-weight: 600;">California Consumer Privacy Act Compliance</h3>
+              <p class="text-gray-700">Tofu complies with the California Consumer Privacy Act (CCPA) to protect the privacy rights of California residents. We are committed to providing transparency about the collection, use, and sharing of personal information and giving users control over their data.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer py-24 sm:py-12 relative mt-24">
+      <div class="footer-shape absolute left-0">
+        <img src="imgs/footer-shape.png" alt="shape" width="100%" />
+      </div>
+      <div class="max-auto max-w-7xl px-6 lg:px-8">
+        <div class="justify-around flex lg:flex-row flex-col py-12">
+          <div class="logo">
+            <a href="/index.html">
+              <img src="imgs/logo.png" alt="logo" width="150px" />
+            </a>
+          </div>
+          <div class="links lg:my-0 my-6">
+            <h5 class="text-xl text-gray-100">Company</h5>
+            <ul>
+              <li>
+                <a href="/contact.html" class="text-gray-300 mt-3 block"
+                  >Support</a
+                >
+              </li>
+              <li>
+                <a href="/contact.html" class="text-gray-300 mt-3 block"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="links">
+            <h5 class="text-xl text-gray-100">Features</h5>
+            <ul>
+              <li>
+                <a href="/ai-features.html" class="text-gray-300 mt-3 block"
+                  >AI Features</a
+                >
+              </li>
+              <li>
+                <a href="/security.html" class="text-gray-300 mt-3 block"
+                  >Security</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-row mt-12">
+          <p class="text-gray-100">&copy; 2024 Tofu. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

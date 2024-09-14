@@ -2,6 +2,11 @@
 .header{
     background-image: linear-gradient($main_color,$second_color);
     background-color: $main_color;
+    &.second{
+        background-image: url("../../imgs/second-header-background.png");
+        background-size: cover;
+        background-position: center;
+    }
     .logo-mobile-bg{
         background-image: linear-gradient($main_color,$second_color);
     }

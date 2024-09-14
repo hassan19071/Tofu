@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tofu | AI Features</title>
+    <meta
+      content="Tofu is an innovative AI payroll software that is specifically designed to simplify the complexities associated with global employment and payroll management. With Tofu you can efficiently onboard and manage workers."
+      name="description"
+    />
+    <link
+      href="https://cdn.prod.website-files.com/641be0e06de2d6dd362c7ba2/662590b75686dcb2c927b921_download-compresskaru.com.png"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.prod.website-files.com/641be0e06de2d6dd362c7ba2/666ad2397951e730b528b50c_download-compresskaru.com%20(1).png"
+      rel="apple-touch-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+    <link rel="stylesheet" href="scss/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="bg-light header second relative">
+      <header class="absolute inset-x-0 top-0 z-50">
+        <nav
+          class="flex items-center justify-between p-6 lg:px-8"
+          aria-label="Global"
+        >
+          <div class="flex lg:flex-1">
+            <a href="/index.html" class="-m-1.5 p-1.5">
+              <img class="h-8 w-auto" src="/imgs/logo.png" alt="logo" />
+            </a>
+          </div>
+          <div class="flex lg:hidden">
+            <button
+              type="button"
+              id="open-btn"
+              class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
+            >
+              <svg
+                class="h-10 w-10"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="hidden lg:flex lg:gap-x-12">
+            <a
+              href="/index.html"
+              class="text-md font-semibold leading-6 text-gray-100"
+              >Home</a
+            >
+            <a
+              href="/ai-features.html"
+              class="text-md font-semibold leading-6 text-gray-100"
+              >AI Features</a
+            >
+            <a
+              href="/security.html"
+              class="text-md font-semibold leading-6 text-gray-100"
+              >Security</a
+            >
+            <a
+              href="/our-story.html"
+              class="text-md font-semibold leading-6 text-gray-100"
+              >Our Story</a
+            >
+          </div>
+          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a
+              href="/contact.html"
+              class="text-md font-semibold leading-6 text-gray-100 hover:tracking-wider transition-all duration-100"
+              >Contact Us <span aria-hidden="true">&rarr;</span></a
+            >
+          </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div
+          class="hidden"
+          role="dialog"
+          aria-modal="true"
+          id="mobile-links-container"
+        >
+          <!-- Background backdrop, show/hide based on slide-over state. -->
+          <div class="fixed inset-0 z-50"></div>
+          <div
+            class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+          >
+            <div class="flex items-center justify-between logo-mobile-bg p-4">
+              <a href="/index.html" class="-m-1.5 p-1.5">
+                <img class="h-8 w-auto" src="/imgs/logo.png" alt="Logo" />
+              </a>
+              <button
+                type="button"
+                id="x-btn"
+                class="-m-2.5 rounded-md p-2.5 text-gray-200"
+              >
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.8"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="space-y-2 py-6">
+                  <a
+                    href="/index.html"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >Home</a
+                  >
+                  <a
+                    href="/ai-features.html"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >AI Features</a
+                  >
+                  <a
+                    href="/security.html"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >Security</a
+                  >
+                  <a
+                    href="/our-story.html"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >Our Story</a
+                  >
+                </div>
+                <div class="py-6">
+                  <a
+                    href="/contact.html"
+                    class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="relative isolate px-6 pt-14 lg:px-8">
+        <div class="mx-auto max-w-5xl pt-32 pb-16">
+          <div class="text-center">
+            <h1
+              class="text-4xl font-bold tracking-tight text-gray-100 sm:text-6xl"
+            >
+              Tofu AI can help you...
+            </h1>
+            <p class="mt-6 text-lg leading-8 text-gray-200">
+              Experience a new level of payroll processing and client management
+              with our AI-powered features.
+            </p>
+            <div class="video mt-10">
+              <div class="video-cover relative" id="videoCover">
+                <img src="imgs/video cover2.png" alt="Video Cover" />
+                <div class="play-icon" id="playIcon">▶</div>
+                <div
+                  class="video-inside-overlay absolute top-0 bottom-0 left-0 right-0"
+                ></div>
+              </div>
+
+              <div class="video-overlay" id="videoOverlay">
+                <div class="video-container">
+                  <div class="loading" id="loading">Loading...</div>
+                  <iframe
+                    id="videoFrame"
+                    width="560"
+                    height="315"
+                    src=""
+                    frameborder="0"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- professional email -->
+    <div class="py-24 sm:py-32 prof-email">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
+          <div class="text">
+            <div class="head pb-12">
+              <img src="imgs/email-icon.png" alt="mail icon" />
+              <h1>Professional email generation in 95 languages</h1>
+            </div>
+            <div class="why-features">
+              <div class="feature flex items-center">
+                <div class="img">
+                  <img src="imgs/shape-why.svg" alt="shape" width="50px" />
+                </div>
+                <div class="description">
+                  <p class="text-gray-600">
+                    Automatically generate precise, professional emails for
+                    client payroll report approvals.
+                  </p>
+                </div>
+              </div>
+              <div class="feature flex items-center my-10">
+                <div class="img">
+                  <img src="imgs/shape-why.svg" alt="shape" width="50px" />
+                </div>
+                <div class="description">
+                  <p class="text-gray-600">
+                    Tofu AI pulls the right data consistently, amplifying your
+                    efficiency and reliability.
+                  </p>
+                </div>
+              </div>
+              <div class="feature flex items-center">
+                <div class="img">
+                  <img src="imgs/shape-why.svg" alt="shape" width="50px" />
+                </div>
+                <div class="description">
+                  <p class="text-gray-600">
+                    Preserve your time and focus by eliminating repetitive email
+                    drafting.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="img lg:ps-20 lg:mt-0 mt-10">
+            <img src="imgs/email-main.png" alt="email img" width="100%" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- support -->
+    <div class="support py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 place-items-center">
+          <div class="img lg:pe-20">
+            <img
+              src="imgs/support.png"
+              alt="support"
+              width="100%"
+              style="border-radius: 20px"
+            />
+          </div>
+          <div class="text lg:pt-0 pt-8">
+            <img src="imgs/internet-icon.png" alt="mail icon" width="60px" />
+            <h1
+              style="
+                font-size: calc(1.5rem + 1.5vw);
+                font-weight: 600;
+                color: #093a4a;
+                margin: 20px 0;
+              "
+            >
+              Multilingual Support
+            </h1>
+            <p class="text-gray-500 mb-9" style="font-size: 17px">
+              Language barriers? Say no more. Tofu makes payroll processing
+              inclusive and effortless with multilingual support
+            </p>
+            <a
+              href="/contact.html"
+              class="py-3 px-10"
+              style="
+                background-image: linear-gradient(to left, #1fcfcf, #2491af);
+                color: #fff;
+                border-radius: 20px;
+              "
+              >Contact Us</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Analysis -->
+    <div class="analysis py-24 sm:py-32" style="background-color: #f0f5f4">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 place-items-center">
+          <div class="text lg:pb-0 pb-8">
+            <img src="imgs/analysis-icon.png" alt="mail icon" width="60px" />
+            <h1
+              style="
+                font-size: calc(1.5rem + 1.5vw);
+                font-weight: 600;
+                color: #093a4a;
+                margin: 20px 0;
+              "
+            >
+              Key Analysis
+            </h1>
+            <p class="text-gray-600 mb-4" style="font-size: 17px">
+              Gift your clients with vital insights for their payroll
+              administration
+            </p>
+            <p class="text-gray-600 mb-9" style="font-size: 17px">
+              With Tofu AI's sophisticated analysis, view comparisons with the
+              previous month that are pivotal for your client's comprehension.
+            </p>
+            <a
+              href="/contact.html"
+              class="py-3 px-10"
+              style="
+                background-image: linear-gradient(to left, #1fcfcf, #2491af);
+                color: #fff;
+                border-radius: 20px;
+              "
+              >Learn More</a
+            >
+          </div>
+          <div class="img lg:ps-20">
+            <img
+              src="imgs/analysis.png"
+              alt="support"
+              width="100%"
+              style="border-radius: 20px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- employment -->
+    <div class="employment py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 place-items-center">
+          <div class="img lg:pe-20">
+            <img
+              src="imgs/support.png"
+              alt="support"
+              width="100%"
+              style="border-radius: 20px"
+            />
+          </div>
+          <div class="text lg:pt-0 pt-8">
+            <img src="imgs/internet-icon.png" alt="mail icon" width="60px" />
+            <h1
+              style="
+                font-size: calc(1.5rem + 1.5vw);
+                font-weight: 600;
+                color: #093a4a;
+                margin: 20px 0;
+              "
+            >
+              Regulation and Employment Queries
+            </h1>
+            <p class="text-gray-500 mb-4" style="font-size: 17px">
+              Got queries about regulations or employment?
+            </p>
+            <p class="text-gray-500 mb-9" style="font-size: 17px">
+              Simply ask Tofu AI. We provide immediate, precise responses
+              grounded on weekly updates, ensuring both you and your clients are
+              always in the know.
+            </p>
+            <a
+              href="/contact.html"
+              class="py-3 px-10"
+              style="
+                background-image: linear-gradient(to left, #1fcfcf, #2491af);
+                color: #fff;
+                border-radius: 20px;
+              "
+              >Contact Us</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer py-24 sm:py-12 relative mt-24">
+      <div class="footer-shape absolute left-0">
+        <img src="imgs/footer-shape.png" alt="shape" width="100%" />
+      </div>
+      <div class="max-auto max-w-7xl px-6 lg:px-8">
+        <div class="justify-around flex lg:flex-row flex-col py-12">
+          <div class="logo">
+            <a href="/index.html">
+              <img src="imgs/logo.png" alt="logo" width="150px" />
+            </a>
+          </div>
+          <div class="links lg:my-0 my-6">
+            <h5 class="text-xl text-gray-100">Company</h5>
+            <ul>
+              <li>
+                <a href="/contact.html" class="text-gray-300 mt-3 block"
+                  >Support</a
+                >
+              </li>
+              <li>
+                <a href="/contact.html" class="text-gray-300 mt-3 block"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="links">
+            <h5 class="text-xl text-gray-100">Features</h5>
+            <ul>
+              <li>
+                <a href="/ai-features.html" class="text-gray-300 mt-3 block"
+                  >AI Features</a
+                >
+              </li>
+              <li>
+                <a href="/security.html" class="text-gray-300 mt-3 block"
+                  >Security</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-row mt-12">
+          <p class="text-gray-100">&copy; 2024 Tofu. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
